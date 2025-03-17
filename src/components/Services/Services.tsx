@@ -39,7 +39,7 @@ const Services: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Виды применяемы технологий сварки
+        Виды применяемых технологий сварки
       </motion.h2>
       <motion.ul
         className={styles.cardList}

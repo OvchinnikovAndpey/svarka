@@ -53,10 +53,10 @@
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 2rem;
-    
+    text-align: justify; /* Выравнивание текста по ширине */
     /* Адаптивный размер шрифта */
     font-size: clamp(1rem, 3vw, 1.5rem);
-    
+    /* hyphens: auto; */
     /* Максимальная ширина для лучшей читаемости */
     max-width: 800px;
     margin-left: auto;
