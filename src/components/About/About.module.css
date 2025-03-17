@@ -1,0 +1,135 @@
+.background {
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    min-height: 89vh;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    padding: 1.5rem;
+    width: 100%; /* Занимает всю ширину контейнера */
+    text-align: center; /* Заголовок остается центрированным */
+    font-size: 2.5rem;
+}
+
+.text {
+    width: 100%; /* Занимает всю ширину контейнера */
+    text-align: justify; /* Выравнивание текста по ширине */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px; /* Ограничиваем максимальную ширину для лучшей читаемости */
+    hyphens: auto; /* Добавляем переносы слов для лучшего выравнивания */
+}
+
+/* Стили для секции преимуществ */
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.advantageItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6); /* Добавляем темный фон для карточки */
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.advantageItem:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.8); /* Темнее при наведении */
+}
+
+.iconWrapper {
+    background-color: rgba(255, 255, 255, 0.2); /* Увеличиваем непрозрачность */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff; /* Добавляем белую обводку */
+}
+
+.advantageItem:hover .iconWrapper {
+    background-color: rgba(255, 255, 255, 0.3); /* Увеличиваем непрозрачность при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-color: #ffcc00; /* Меняем цвет обводки при наведении */
+}
+
+.icon {
+    font-size: 40px !important;
+    color: #ffcc00 !important; /* Меняем цвет иконок на яркий желтый */
+    transition: transform 0.3s ease;
+}
+
+.advantageItem:hover .icon {
+    transform: scale(1.2);
+}
+
+.advantageTitle {
+    color: #ffcc00; /* Меняем цвет заголовка на яркий желтый */
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.advantageDescription {
+    color: rgba(255, 255, 255, 0.9); /* Увеличиваем непрозрачность текста */
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .advantages {
+        gap: 1.5rem;
+    }
+    
+    .advantageItem {
+        width: 140px;
+        padding: 1rem 0.5rem;
+    }
+    
+    .iconWrapper {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon {
+        font-size: 30px !important;
+    }
+    
+    .advantageTitle {
+        font-size: 0.9rem;
+    }
+    
+    .advantageDescription {
+        font-size: 0.8rem;
+    }
+}

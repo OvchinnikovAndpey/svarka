@@ -1,0 +1,102 @@
+.lots {
+    display: flex;
+    flex-direction: column;
+    /* margin: 60px 20px; */
+  }
+  
+  .card {
+    position: relative;
+    width: clamp(
+      15.625rem,
+      14.2617rem + 6.7114vw,
+      25rem
+    ); /* Задайте фиксированную ширину карточки */
+    height: clamp(
+      18.75rem,
+      17.8412rem + 4.4743vw,
+      25rem
+    ); /* Задайте фиксированную высоту карточки */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #000000;
+  }
+  
+  .cardList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 2rem auto;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--main-text-color);
+    transition: opacity 0.3s;
+  }
+  
+  .cardTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(1rem, 0.7083rem + 1.2963vw, 1.875rem); /* 16px to 30px */
+    /* margin: 0; */
+    transition: opacity 0.3s;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .cardText {
+    position: absolute;
+    width: 100%; /* Установите желаемую ширину для текста */
+    max-width: 350px; /* Максимальная ширина для текста */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    /* margin: 0; */
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .card:hover .cardTitle {
+    opacity: 0;
+  }
+  
+  .card:hover .cardText {
+    opacity: 1;
+  }
+  
