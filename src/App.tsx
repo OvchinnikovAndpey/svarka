@@ -8,6 +8,7 @@ import About from './components/About/About';
 import Services from './components/Services/Services';
 // import Activity from './components/Activity/Activity';
 import Achievements from './components/Achievements/Achievements';
+import Carousel from './components/Carousel/Carousel';
 
 // Создаем тему для Material-UI
 const theme = createTheme({
@@ -33,6 +34,7 @@ const App: React.FC = () => {
       <About />
       <Achievements />
       <Services />
+      <Carousel />
       {/* <Activity /> */}
       {/* Здесь будут другие компоненты вашего сайта */}
     </ThemeProvider>
