@@ -1,0 +1,41 @@
+.mapContainer {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+  
+  .mapWrapper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .map {
+    border: none;
+    pointer-events: none; /* Отключаем взаимодействие с картой по умолчанию */
+  }
+  
+  .mapInteractive {
+    pointer-events: auto; /* Включаем взаимодействие с картой при наведении */
+  }
+  
+  .mapOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .mapOverlayText {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
