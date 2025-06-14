@@ -28,22 +28,22 @@ const Carousel: React.FC = () => {
   };
 
   // Автоматическая прокрутка
-  useEffect(() => {
-    let interval: ReturnType<typeof setInterval>;
+  // useEffect(() => {
+  //   let interval: ReturnType<typeof setInterval>;
     
-    if (isAutoPlaying) {
-      interval = setInterval(() => {
-        goToNext();
-      }, 5000);
-    }
+  //   if (isAutoPlaying) {
+  //     interval = setInterval(() => {
+  //       goToNext();
+  //     }, 45000);
+  //   }
     
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [isAutoPlaying, goToNext]);
-  // Приостановка автопрокрутки при наведении
-  const handleMouseEnter = () => setIsAutoPlaying(false);
-  const handleMouseLeave = () => setIsAutoPlaying(true);
+  //   return () => {
+  //     if (interval) clearInterval(interval);
+  //   };
+  // }, [isAutoPlaying, goToNext]);
+  // // Приостановка автопрокрутки при наведении
+  // const handleMouseEnter = () => setIsAutoPlaying(false);
+  // const handleMouseLeave = () => setIsAutoPlaying(true);
 
   const variants = {
     enter: (direction: number) => ({
@@ -75,8 +75,8 @@ const Carousel: React.FC = () => {
         <div className={styles.carousel}>
           <div 
             className={styles.carouselTrack}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
           >
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
